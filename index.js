@@ -19,7 +19,6 @@ connectionDB();
 app.use(`${baseurl}/user`, userRouter);
 app.use(`${baseurl}/post`, postRouter);
 app.use(`${baseurl}/comment`, commentRouter);
-
 app.use(globalerr);
 app.use("*", (req, res) => res.send("In-valid Routing Plz check url"));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

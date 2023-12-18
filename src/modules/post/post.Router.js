@@ -1,5 +1,4 @@
 import { Router } from "express";
-
 import * as posts from "./controller/post.js";
 import { auth } from "../../middleware/Authorization.middle.js";
 import postendpoint from "./post.endpoint.js";
@@ -8,6 +7,7 @@ import { validation } from "../../middleware/validation.middle.js";
 import commentRouter from "../comment/comment.Router.js";
 const postRouter = Router();
 postRouter.use("/:postId/comment", commentRouter);
+
 postRouter.post(
   "/createPost",
   auth(postendpoint.create),

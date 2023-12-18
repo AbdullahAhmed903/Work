@@ -13,6 +13,7 @@ export const auth = (accessroles = []) => {
       next(new Error("authorization is not defined", { cause: 400 }));
     } else {
       const { authorization } = req.headers;
+
       if (!authorization?.startsWith(process.env.BearerKey)) {
         next("in-valid token OR BearerKey", { cause: 400 });
       } else {

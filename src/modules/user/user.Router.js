@@ -11,8 +11,16 @@ userRouter.get(
   user.confirmemail
 );
 userRouter.post("/login", validation(validators.login), user.login);
-userRouter.patch("/forgetpassword", user.forgetpassword);
-userRouter.patch("/resetpassword", user.resetpassword);
-
+userRouter.patch(
+  "/forgetpassword",
+  validation(validators.forgetpassword),
+  user.forgetpassword
+);
+userRouter.patch(
+  
+  "/resetpassword",
+  validation(validators.resetpassword),
+  user.resetpassword
+);
 
 export default userRouter;
