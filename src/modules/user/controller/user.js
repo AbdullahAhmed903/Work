@@ -127,5 +127,6 @@ export const resetpassword = asyncHandler(async (req, res, next) => {
 
 
 const Signout=asyncHandler(async(req,res,next)=>{
+  const {email}=req.body;
   
 })

@@ -98,3 +98,7 @@ export const unlikePost = asyncHandler(async (req, res, next) => {
     res.status(200).json({ message: "done" });
   }
 });
+
+const done=asyncHandler(async(req,res,next)=>{
+  console.log(req);
+})
