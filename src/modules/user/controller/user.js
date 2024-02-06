@@ -124,3 +124,9 @@ export const resetpassword = asyncHandler(async (req, res, next) => {
       : next(Error("in-valid code", { cause: 404 }));
   }
 });
+
+
+const Signout=asyncHandler(async(req,res,next)=>{
+  const {email}=req.body;
+  
+})
